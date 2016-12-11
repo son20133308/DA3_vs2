@@ -1,0 +1,46 @@
+.navbar-brand{
+	font-size: 1.5em;
+}
+
+.thumb {
+    height: 200px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.thumb2 {
+    height: 350px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.well2{
+	padding: 19px;
+}
+
+.lead {
+    font-size: 16px;
+}
+
+.new-slider h4{
+    color: white;
+}
+
+.new-slider:hover{
+    color: white;
+}
+
+.pager .active a{
+    color: white;
+    background: #337ab7;
+}
+
+.pager .active a:hover{
+    color: #337ab7;
+}
