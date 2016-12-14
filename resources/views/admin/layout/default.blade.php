@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin</a>
+                <!-- <a class="navbar-brand" href="index.html">{{Auth::user()->name}}</a> -->
             </div>
             <!-- /.navbar-header -->
 
@@ -53,7 +53,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="{{URL::route('editUser',Auth::user() -> id)}}"><i class="fa fa-user fa-fw"></i> {{Auth::user() -> name}}</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="{{URL::route('editUser',Auth::user() -> id)}}"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="{{url('/logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
@@ -79,7 +79,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="/admin/index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản lý bài báo<span class="fa arrow"></span></a>

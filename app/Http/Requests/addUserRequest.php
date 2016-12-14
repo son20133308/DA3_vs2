@@ -38,11 +38,11 @@ class addUserRequest extends FormRequest
             
             'email.required' => 'Vui lòng nhập Email',
             'email.unique' => 'Email này đã được sử dụng',
-            'name.required' => 'Vui lòng nhập Username',
-            'name.unique'=>'Username đã tồn tại',
-            'password.required' =>' Vui lòng nhập Password',
-            'confirm_password.required'=>'Vui lòng nhập ConfirmPassword',
-            'confirm_password.same'=>'ConfirmPassword nhập k chính xác'
+            'name.required' => 'Vui lòng nhập Tài khoản',
+            'name.unique'=>'Tài khoản đã tồn tại',
+            'password.required' =>' Vui lòng nhập Mật',
+            'confirm_password.required'=>'Vui lòng nhập Xác thực mật khẩu',
+            'confirm_password.same'=>'Xác thực mật khẩu không chính xác'
         ];
     }
 }

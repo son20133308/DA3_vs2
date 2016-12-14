@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
         	[
         		'name' =>'son',
         		'email' =>'admin2@gmail.com',
-        		'password'=>Hash::make('111111'),
+        		'password'=>Hash::make('222222'),
                 'role'=>0
         	],
         	[

@@ -37,11 +37,14 @@
 	                    <option value="0">Không có thể loại cha</option>
 	                    }
 	                    @endif
-	                    <option value="{{$tl->parent_id}}">{{$tl->ten}}</option>
+	                    <?php  
+	                    	$tlc = DB::table('tbl_theloai')->where('id_theloai',$tl->parent_id)->first();
+	                    ?>
+	                    <option value="{{$tl->parent_id}}">{{$tlc->ten}}</option>
 	                    @foreach($theloais as $tls)
-		                    @if($tls->id_theloai !== $tl->id_theloai)
+		                    @if($tls->id_theloai !== $tl->parent_id)
 		                    {
-		                    <option value="{{$tls->parent_id}}">{{$tls->ten}}</option>
+		                    <option value="{{$tls->id_theloai}}">{{$tls->ten}}</option>
 
 		                    }
 		                    @endif
@@ -61,7 +64,7 @@
 	                <label>ẨN DANH</label>
 	                <input class="form-control" name="slug" placeholder="Vui lòng nhập ẩn danh cho thể loại" value="{{$tl->slug}}" />
 	            </div>
-	            <button type="submit" class="btn btn-default">Category Add</button>
+	            <button type="submit" class="btn btn-default">Add</button>
 	            <button type="reset" class="btn btn-default">Reset</button>
 	        <form>
 	        @endforeach

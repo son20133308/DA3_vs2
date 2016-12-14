@@ -6,6 +6,8 @@ use App\Models\theloai;
 use App\Models\baibao;
 use App\User;
 use App\Requests\editBaiBaoRequest;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Schema\Blueprint;
 // use Illuminate\Database\Eloquent\Model;
 
 
@@ -52,17 +54,19 @@ class AdminModel
 	public function postAddUser($request){
 		$user = new User;
 		$user->name = $request ->name;
-		$user->password =$request ->password;
+		$user->password = Hash::make($request->password);
 		$user->role = $request ->role;
 		$user->email =$request ->email;
+		
 		$user-> save();
 	}
 	public function postEditUser($request,$id){
 		$user = User::where('id',$id)->get()->first();
 		$user->name = $request ->name;
-		$user->password = $request ->password;
+		$user->password = Hash::make($request->password);
 		$user->email = $request->email;
 		$user->role = $request->role;
+
 		$user ->save();
 	}
 }

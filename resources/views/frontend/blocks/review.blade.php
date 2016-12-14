@@ -3,6 +3,7 @@
     <div class="row well2">
 
         <form action="/danhgia" method="POST" style=" display:inline-block;">
+        <input type="hidden" name="_token" value="{{ csrf_token()}}">
         @include('frontend.errors.errors')
         @include('frontend.errors.flash')
         <input type="hidden" name="_token" value="{{ csrf_token() }}">

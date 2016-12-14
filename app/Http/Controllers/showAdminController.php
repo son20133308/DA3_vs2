@@ -16,6 +16,7 @@ use App\Http\Requests\editUserRequest;
 use App\Http\Requests\editTheLoaiRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class showAdminController extends Controller
 {
@@ -90,7 +91,13 @@ class showAdminController extends Controller
 	public function postEditUser(editUserRequest $request,$id){
 		$user =new AdminModel;
 		$user->postEditUser($request,$id);
+		if(Auth::user()->role ==1){
 		return redirect('admin/getListUser')->with(['flash_level'=>'success','flash_message'=>'Success !!! Sửa dữ liệu thành công']);
+		}
+		else{
+			return redirect('/admin/index')->with(['flash_level'=>'success','flash_message'=>'Success !!! Sửa dữ liệu thành công']);
+		}
+
 	}
 	//DanhGiaController
 	public function getListDanhGia(){

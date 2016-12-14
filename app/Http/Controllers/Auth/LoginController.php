@@ -51,7 +51,7 @@ class LoginController extends Controller
             return redirect('admin/index');
         }
         else{
-            return redirect()->back();
+            return redirect()->back()->with(['flash_level'=>'danger','flash_message'=>'Tài khoản hoặc mật khẩu không chính xác']);
         }
     }
     public function logout(Request $request)

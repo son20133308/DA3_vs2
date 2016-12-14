@@ -51,6 +51,13 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-offset-4">
+            @if( Session::has('flash_message'))
+                <div class="alert alert-{{ Session::get('flash_level')}}">
+                    {{ Session::get('flash_message')}}
+                </div>
+            @endif
+            </div>
+            <div class="col-md-4 col-md-offset-4">
                         @if( count($errors) > 0)
                             <div class="alert alert-danger">
                                 <ul>
@@ -75,6 +82,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{asset('admin/dist/js/sb-admin-2.js')}}"></script>
+    <script type="text/javascript">
+        $("div.alert").delay(3000).slideUp();
+    </script>
 
 </body>
 

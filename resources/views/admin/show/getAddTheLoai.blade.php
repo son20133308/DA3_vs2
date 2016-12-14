@@ -51,7 +51,7 @@
 	                <label>ẨN DANH</label>
 	                <input class="form-control" name="slug" placeholder="Please Enter Category Keywords" value="{{old('slug')}}" />
 	            </div>
-	            <button type="submit" class="btn btn-default">Category Add</button>
+	            <button type="submit" class="btn btn-default">Add</button>
 	            <button type="reset" class="btn btn-default">Reset</button>
 	        <form>
 	    </div>

@@ -42,6 +42,7 @@
 	                <label>Email</label>
 	                <input class="form-control" type="email" name="email" value="{{$us->email}}" />
 	            </div>
+	            @if(Auth::user()->role ==1)
 	            <div class="form-group">
 	                <label>Key</label>
 	                <select class="form-control" name="role">
@@ -49,7 +50,17 @@
 	                    <option value="1">1</option>
 	                </select>
 	            </div>
-	            <button type="submit" class="btn btn-default">Category Edit</button>
+	            @else
+
+	            <div class="form-group">
+	                <label>Key</label>
+	                <select class="form-control" name="role">
+	                    <option value="0">0</option>
+	                    
+	                </select>
+	            </div>
+	            @endif
+	            <button type="submit" class="btn btn-default">Edit</button>
 	            <button type="reset" class="btn btn-default">Reset</button>
 	            
 	        <form>

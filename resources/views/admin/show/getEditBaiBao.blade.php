@@ -58,7 +58,7 @@
 	                <label>Nội dung</label>
 	                <textarea class="form-control" rows="3" name="content">{{$bb->content}}</textarea>
 	            </div>
-	            <button type="submit" class="btn btn-default">Category Edit</button>
+	            <button type="submit" class="btn btn-default">Edit</button>
 	            <button type="reset" class="btn btn-default">Reset</button>
 	            
 	        <form>
