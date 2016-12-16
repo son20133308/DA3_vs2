@@ -71,11 +71,18 @@ class showAdminController extends Controller
 	}
 	//UserController
 	public function getListUser(){
+		if(Auth::user()->role ==1){
 		$user = User::select()->get();
 		return View('admin.show.getListUser',['user'=>$user]);
+		}
+		else return redirect('/admin/index');
+		
 	}
 	public function getAddUser(){
+		if(Auth::user()->role ==1){
 		return View('admin.show.getAddUser');
+		}
+		else return redirect('/admin/index');
 	}
 	public function postAddUser(addUserRequest $request){
 		$user =new AdminModel;
@@ -90,13 +97,19 @@ class showAdminController extends Controller
 	}
 	public function postEditUser(editUserRequest $request,$id){
 		$user =new AdminModel;
-		$user->postEditUser($request,$id);
-		if(Auth::user()->role ==1){
-		return redirect('admin/getListUser')->with(['flash_level'=>'success','flash_message'=>'Success !!! Sửa dữ liệu thành công']);
-		}
-		else{
-			return redirect('/admin/index')->with(['flash_level'=>'success','flash_message'=>'Success !!! Sửa dữ liệu thành công']);
-		}
+		$us = User::where('id',$id)->get()->first();
+		// if(Hash::make($request->oldpassword)==$us->password){
+			$user->postEditUser($request,$id);
+			if(Auth::user()->role ==1){
+			return redirect('admin/getListUser')->with(['flash_level'=>'success','flash_message'=>'Success !!! Sửa dữ liệu thành công']);
+			}
+			else{
+				return redirect('/admin/index')->with(['flash_level'=>'success','flash_message'=>'Success !!! Sửa dữ liệu thành công']);
+			}
+		// }
+		// else{
+		// 	 return redirect()->back()->with(['flash_level'=>'danger','flash_message'=>'Error !!! Sửa dữ liệu không thành công']);
+		// }
 
 	}
 	//DanhGiaController

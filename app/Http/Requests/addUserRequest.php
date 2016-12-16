@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Auth;
 
 class addUserRequest extends FormRequest
 {
@@ -28,7 +29,8 @@ class addUserRequest extends FormRequest
             'email' => 'required|email|unique:users,email',
             'name' => 'required|unique:users,name',
             'password' =>'required',
-            'confirm_password'=>'required|same:password'
+            'confirm_password'=>'required|same:password',
+ 
 
         ];
     }
@@ -42,7 +44,8 @@ class addUserRequest extends FormRequest
             'name.unique'=>'Tài khoản đã tồn tại',
             'password.required' =>' Vui lòng nhập Mật',
             'confirm_password.required'=>'Vui lòng nhập Xác thực mật khẩu',
-            'confirm_password.same'=>'Xác thực mật khẩu không chính xác'
+            'confirm_password.same'=>'Xác thực mật khẩu không chính xác',
+            
         ];
     }
 }

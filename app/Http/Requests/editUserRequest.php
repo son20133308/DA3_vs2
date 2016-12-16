@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Auth;
+
 
 class editUserRequest extends FormRequest
 {
@@ -26,14 +28,16 @@ class editUserRequest extends FormRequest
         return [
             'name'=>'required',
             'password' => 'required',
-            'email'=>'required'
+            'email'=>'required',
+            // 'oldpassword' => 'required'
         ];
     }
     public function messages(){
         return [
             'name.required' =>'Vui lòng nhập tài khoản',
             'password.required' =>'Vui lòng nhập password',
-            'email.required' =>'Vui lòng nhập Email'
+            'email.required' =>'Vui lòng nhập Email',
+            // 'oldpassword.required' =>'Vui lòng nhập mật khẩu cũ'
         ];
 
     }

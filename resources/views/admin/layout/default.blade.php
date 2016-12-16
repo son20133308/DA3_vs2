@@ -88,6 +88,9 @@
                                     <a href="/admin/getListTheLoai">Danh sách thể loại</a>
                                 </li>
                                 <li>
+                                    <a href="/admin/getAddTheLoai">Thêm thể loại</a>
+                                </li>
+                                <li>
                                     <a href="/admin/getListBaiBao">Danh sách bài báo</a>
                                 </li>
                             </ul>
@@ -108,6 +111,9 @@
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="/admin/getListUser">Danh sách tài khoản</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/getAddUser">Thêm tài khoản</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

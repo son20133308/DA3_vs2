@@ -25,10 +25,12 @@ class baibaoController extends Controller
     }
 
     public function tim_kiem_bai_viet(timkiemRequest $request){
-        $baibao = new baibao();
-        $baibao = $baibao->tim_kiem_bai_bao($request->search);
-        if($baibao!= NULL)
-            return view('frontend.main', ['title' => 'Kết quả', 'baibao' => $baibao]);
-        else return view ('frontend.main', ['title' => 'Không tìm thấy']);
+        $baibao1 = new baibao();
+        $baibao = $baibao1->tim_kiem_bai_bao($request->search);
+        $slider = $baibao1->lay_slider();
+        $count = $baibao1->lay_count($request->search);
+        if($count != 0)
+            return view('frontend.main', ['title' => 'Kết quả', 'baibao' => $baibao, 'slider' => $slider]);
+        else return view ('frontend.main', ['title' => 'Không tìm thấy', 'baibao' => $baibao, 'slider' => $slider]);
     }
 }

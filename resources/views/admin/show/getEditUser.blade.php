@@ -34,9 +34,13 @@
 	                <label>Tài khoản</label>
 	                <input class="form-control" name="name" value="{{$us->name}}" />
 	            </div>
+	           <!--  <div class="form-group">
+	                <label>Mật khẩu cũ</label>
+	                <input class="form-control" type="password" name="oldpassword"/>
+	            </div> -->
 	            <div class="form-group">
-	                <label>Mật khẩu</label>
-	                <input class="form-control" type="password" name="password"/>
+	                <label>Mật khẩu mới</label>
+	                <input class="form-control" type="password" name="password" />
 	            </div>
 	            <div class="form-group">
 	                <label>Email</label>

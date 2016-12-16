@@ -15,7 +15,7 @@
             @endif
     </div>
     <!-- /.col-lg-12 -->
-    <div class="col-lg-12">
+    <!-- <div class="col-lg-12">
         <div class="col-sm-6">
         </div>
         <div class="col-sm-2">
@@ -26,7 +26,7 @@
             <div class="add" style=" margin-bottom: 2px;"  >
             <a class="btn btn-primary" href="/admin/getAddUser" >Thêm tài khoản<span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
-    </div>
+    </div> -->
     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
         <thead>
             <tr align="center">

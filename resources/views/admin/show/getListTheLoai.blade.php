@@ -16,11 +16,11 @@
                 </div>
             @endif
     </div>
-    <div class="col-lg-12">
+    <!-- <div class="col-lg-12">
             <div class="add" style="margin-left: 895px; margin-bottom: 5px;" >
             <a class="btn btn-primary" href="/admin/getAddTheLoai" >Thêm thể loại<span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
-    </div>
+    </div> -->
     <!-- /.col-lg-12 -->
     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
         <thead>

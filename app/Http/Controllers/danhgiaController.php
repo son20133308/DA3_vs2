@@ -10,9 +10,7 @@ class danhgiaController extends Controller
 {
     public function gui_danh_gia(danhgiaRequest $request){
         $danhgia = new danhgia();
-        $danhgia->email_khachhang = $request->email;
-        $danhgia->noidung = $request->content;
-        $danhgia->save();
+        $danhgia->gui_danh_gia($request);
         return redirect()->route('main')->with(['flash_level' => 'result_msg', 'flash_message' => 'Gửi đánh giá thành công!']);
 
     }
